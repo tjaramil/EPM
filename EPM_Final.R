@@ -25,14 +25,6 @@ EPM.Closed <- EPM[c(386:439),]
 summary(EPM.Open)
 summary(EPM.Closed)
 
-# Modify our dataframe by adding a column of sum freq1,2 and sum dur1,2
-
-#EPM$Total.Closed.freq <- EPM$Closed.Arm.1.freq + EPM$Closed.Arm.2.freq
-#EPM$Total.Closed.dur <- EPM$Closed.arm.1.dur + EPM$Closed.arm.2.dur
-
-#EPM$Total.Open.freq <- EPM$Open.arms.1.freq + EPM$Open.arm.2.freq
-#EPM$Total.Open.dur <- EPM$Open.arms.1.dur + EPM$Open.arm.2.dur
-
 
 #1st set the order you want data arranged to x
 x <- c("WT", "HET", "KO")
@@ -110,21 +102,6 @@ KO.Closed <- subset(EPM.Closed, Geno == "KO")
 KO.Closed.Bouts <- KO.Closed$Bouts
 KO.Closed.Dur <- KO.Closed$Duration.Second.
 
-
-
-## Duration: Open and Closed
-
-#WT.dur <- subset(EPM, Genotype == "WT")
-#WT.Odur <- WT.dur$Total.Open.dur #Open        
-#T.Cdur <- WT.dur$Total.Closed.dur #Closed
-
-#HET.dur <- subset(EPM, Genotype == "HET")
-#HET.Odur <- HET.dur$Total.Open.dur  
-#HET.Cdur <- HET.dur$Total.Closed.dur
-
-#KO.dur <- subset(EPM, Genotype == "KO")
-#KO.Odur <- KO.dur$Total.Open.dur  
-#KO.Cdur <- KO.dur$Total.Closed.dur 
 
 ###########################################################################################################
 ## Perform the t-Test 
