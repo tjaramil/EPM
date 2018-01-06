@@ -147,7 +147,7 @@ t.test(HET.Closed.Dur,KO.Closed.Dur, mu=0, alternative = "two.sided", conf=0.95,
 #indep variable are Genotype and Sex
 #Dep variables is arm frequency
 names(EPM.Open)
-Anova.1 <- aov(Bouts ~ Sex * Geno, data = EPM.Open) 
+Anova.1 <- aov(Bouts ~ Sex * Geno, data = EPM.Open) #Change out bouts for other dependent variables
 summary(Anova.1)
 
 #Post hoc test 
